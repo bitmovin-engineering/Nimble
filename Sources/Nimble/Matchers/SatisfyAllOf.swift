@@ -41,6 +41,7 @@ public func && <T>(left: Predicate<T>, right: Predicate<T>) -> Predicate<T> {
     return satisfyAllOf(left, right)
 }
 
+/*
 // There's a compiler bug in swift 5.7.2 and earlier (xcode 14.2 and earlier)
 // which causes runtime crashes when you use `[any AsyncablePredicate<T>]`.
 // https://github.com/apple/swift/issues/61403
@@ -91,6 +92,7 @@ public func && <T>(left: some AsyncablePredicate<T>, right: some AsyncablePredic
     return satisfyAllOf(left, right)
 }
 #endif // swift(>=5.8.0)
+*/
 
 #if canImport(Darwin)
 import class Foundation.NSObject
